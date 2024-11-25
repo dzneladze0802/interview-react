@@ -22,10 +22,6 @@ const generateData = (): IPriceItem[] => {
   return result;
 };
 
-function Input(props: React.InputHTMLAttributes<HTMLInputElement>) {
-  return <input {...props} />;
-}
-
 export default function SlowState() {
   const [localData, setLocalData] = useState(() => generateData());
 
@@ -69,8 +65,8 @@ export default function SlowState() {
       {localData.map(({ label, price, amount, id }) => (
         <div key={id}>
           <h2>{label}</h2>
-          <Input value={price} onChange={(e) => handlePriceChange(e, id)} />
-          <Input value={amount} onChange={(e) => handleAmountChange(e, id)} />
+          <input value={price} onChange={(e) => handlePriceChange(e, id)} />
+          <input value={amount} onChange={(e) => handleAmountChange(e, id)} />
         </div>
       ))}
       ;

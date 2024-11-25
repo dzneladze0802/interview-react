@@ -10,3 +10,5 @@ export { default as Filters } from "./Filters";
 export { default as ArrayState } from "./ArrayState";
 export { default as HeavyCalculation } from "./HeavyCalculation";
 export { default as SlowState } from "./SlowState";
+export { default as ManualRender } from "./ManualRender";
+export { default as RemoveElem } from "./RemoveElem";

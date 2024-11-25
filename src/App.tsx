@@ -12,9 +12,13 @@ import {
   ArrayState,
   HeavyCalculation,
   SlowState,
+  ManualRender,
+  RemoveElem,
 } from "./Quiz";
 
-export default function App({ quizType }: { quizType: QUIZ_ENUM }) {
+const quizType: QUIZ_ENUM = QUIZ_ENUM.REMOVE_ELEM;
+
+export default function App() {
   switch (quizType) {
     case QUIZ_ENUM.SUSPENSE:
       return <Suspense />;
@@ -40,6 +44,10 @@ export default function App({ quizType }: { quizType: QUIZ_ENUM }) {
       return <HeavyCalculation />;
     case QUIZ_ENUM.SLOW_STATE:
       return <SlowState />;
+    case QUIZ_ENUM.MANUAL_RENDER:
+      return <ManualRender />;
+    case QUIZ_ENUM.REMOVE_ELEM:
+      return <RemoveElem />;
     default:
       return <>No quiz</>;
   }

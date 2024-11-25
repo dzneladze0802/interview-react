@@ -1,4 +1,8 @@
 {
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": ["esnext", "dom"]
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
