@@ -48,7 +48,10 @@ export default function App() {
       return <ManualRender />;
     case QUIZ_ENUM.REMOVE_ELEM:
       return <RemoveElem />;
-    default:
-      return <>No quiz</>;
+    default: {
+      const never: never = quizType;
+
+      return <>No quiz {never}</>;
+    }
   }
 }
