@@ -16,12 +16,15 @@ import {
   RemoveElem,
   Portal,
   SimplePortal,
+  Hooks,
 } from "./Quiz";
 
-const quizType: Quiz = "PORTAL";
+const quizType: Quiz = "HOOKS";
 
 export default function App() {
   switch (quizType) {
+    case "HOOKS":
+      return <Hooks />;
     case "SUSPENSE":
       return <Suspense />;
     case "MEMO":

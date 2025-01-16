@@ -14,4 +14,5 @@ export type Quiz =
   | "MANUAL_RENDER"
   | "REMOVE_ELEM"
   | "PORTAL"
-  | "SIMPLE_PORTAL";
+  | "SIMPLE_PORTAL"
+  | "HOOKS";

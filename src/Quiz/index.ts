@@ -14,3 +14,4 @@ export { default as ManualRender } from "./ManualRender";
 export { default as RemoveElem } from "./RemoveElem";
 export { default as Portal } from "./Portal";
 export { default as SimplePortal } from "./SimplePortal";
+export { default as Hooks } from "./Hooks";
