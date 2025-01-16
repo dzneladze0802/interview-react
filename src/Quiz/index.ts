@@ -12,3 +12,5 @@ export { default as HeavyCalculation } from "./HeavyCalculation";
 export { default as SlowState } from "./SlowState";
 export { default as ManualRender } from "./ManualRender";
 export { default as RemoveElem } from "./RemoveElem";
+export { default as Portal } from "./Portal";
+export { default as SimplePortal } from "./SimplePortal";

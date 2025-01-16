@@ -1,0 +1,17 @@
+export type Quiz =
+  | "SUSPENSE"
+  | "MEMO"
+  | "OBSERVER"
+  | "CALL_STACK"
+  | "BATCHING"
+  | "REF"
+  | "REFERENCE"
+  | "SLOW_LIST"
+  | "FILTERS"
+  | "ARRAY_STATE"
+  | "HEAVY_CALCULATION"
+  | "SLOW_STATE"
+  | "MANUAL_RENDER"
+  | "REMOVE_ELEM"
+  | "PORTAL"
+  | "SIMPLE_PORTAL";

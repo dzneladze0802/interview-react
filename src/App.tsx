@@ -1,4 +1,4 @@
-import { QUIZ_ENUM } from "./constants";
+import { type Quiz } from "./types";
 import {
   Suspense,
   Memo,
@@ -14,40 +14,47 @@ import {
   SlowState,
   ManualRender,
   RemoveElem,
+  Portal,
+  SimplePortal,
 } from "./Quiz";
 
-const quizType: QUIZ_ENUM = QUIZ_ENUM.REMOVE_ELEM;
+const quizType: Quiz = "PORTAL";
 
 export default function App() {
   switch (quizType) {
-    case QUIZ_ENUM.SUSPENSE:
+    case "SUSPENSE":
       return <Suspense />;
-    case QUIZ_ENUM.MEMO:
+    case "MEMO":
       return <Memo />;
-    case QUIZ_ENUM.OBSERVER:
+    case "OBSERVER":
       return <Observer />;
-    case QUIZ_ENUM.CALL_STACK:
+    case "CALL_STACK":
       return <CallStack />;
-    case QUIZ_ENUM.BATCHING:
+    case "BATCHING":
       return <Batching />;
-    case QUIZ_ENUM.REF:
+    case "REF":
       return <Ref />;
-    case QUIZ_ENUM.REFERENCE:
+    case "REFERENCE":
       return <Reference />;
-    case QUIZ_ENUM.SLOW_LIST:
+    case "SLOW_LIST":
       return <SlowList />;
-    case QUIZ_ENUM.FILTERS:
+    case "FILTERS":
       return <Filters />;
-    case QUIZ_ENUM.ARRAY_STATE:
+    case "ARRAY_STATE":
       return <ArrayState />;
-    case QUIZ_ENUM.HEAVY_CALCULATION:
+    case "HEAVY_CALCULATION":
       return <HeavyCalculation />;
-    case QUIZ_ENUM.SLOW_STATE:
+    case "SLOW_STATE":
       return <SlowState />;
-    case QUIZ_ENUM.MANUAL_RENDER:
+    case "MANUAL_RENDER":
       return <ManualRender />;
-    case QUIZ_ENUM.REMOVE_ELEM:
+    case "REMOVE_ELEM":
       return <RemoveElem />;
+    case "PORTAL":
+      return <Portal />;
+    case "SIMPLE_PORTAL":
+      return <SimplePortal />;
+
     default: {
       const never: never = quizType;
 
